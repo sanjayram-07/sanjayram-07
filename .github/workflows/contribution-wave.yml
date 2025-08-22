@@ -2,7 +2,7 @@ name: Generate Contribution Wave
 
 on:
   schedule:
-    - cron: "0 0 * * *"   
+    - cron: "0 0 * * *"   # Daily at midnight
   workflow_dispatch:
 
 jobs:
@@ -16,13 +16,14 @@ jobs:
         uses: Platane/snk@master
         with:
           github_user_name: sanjayram-07
-          outputs: |
-            dist/contribution-wave.svg
+          svg_out_path: contribution-wave.svg   # Output SVG in repo root
+          gif_out_path: false                   # No GIF needed
 
-      - name: Publish to output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+      - name: Push Contribution Wave
+        uses: ad-m/github-push-action@v0.6.0
         with:
-          target_branch: output
-          build_dir: dist
+          branch: output
+          force: true
+          file: contribution-wave.svg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
