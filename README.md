@@ -44,11 +44,6 @@ A comprehensive collection of **Data Structures & Algorithms** implementations i
 
 ---
 
-## 📈 Contribution  
-![Contribution Wave](https://github.com/sanjayram-07/sanjayram-07/blob/output/contribution-wave.svg)
-
-
-
 ## 🏆 Competitive Programming  
 - LeetCode: [SanjayRam_M](https://leetcode.com/SanjayRam_M)  
 - Solved 50+ problems across DSA topics  
