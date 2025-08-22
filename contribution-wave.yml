@@ -1,8 +1,8 @@
 name: Generate Contribution Wave
 
 on:
-  schedule: # Runs every 24 hours
-    - cron: "0 0 * * *"
+  schedule:
+    - cron: "0 0 * * *"   # Runs every day at midnight
   workflow_dispatch:
 
 jobs:
@@ -13,10 +13,16 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Generate Contribution Wave
-        uses: lowlighter/metrics@latest
+        uses: Platane/snk@master   # Snake & Wave generator
         with:
-          filename: dist/contribution-wave.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          base: ""
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
+          github_user_name: sanjayram-07
+          outputs: |
+            dist/contribution-wave.svg
+
+      - name: Push Contribution Wave
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
