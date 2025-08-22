@@ -39,6 +39,15 @@ A comprehensive collection of **Data Structures & Algorithms** implementations i
 
 ---
 
+## 🔥 Contribution Streak  
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=sanjayram-07&theme=tokyonight&hide_border=false)](https://git.io/streak-stats)  
+
+---
+
+## 📈 Contribution Graph  
+![Sanjay's Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=sanjayram-07&theme=tokyo-night)  
+
+
 ## 🏆 Competitive Programming  
 - LeetCode: [SanjayRam_M](https://leetcode.com/SanjayRam_M)  
 - Solved 50+ problems across DSA topics  
