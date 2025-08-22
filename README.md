@@ -45,7 +45,7 @@ A comprehensive collection of **Data Structures & Algorithms** implementations i
 ---
 
 ## 📈 Contribution  
-![Contribution Wave](https://github.com/sanjayram-07/sanjayram-07/blob/output/contribution-wave.svg)
+![Contribution Wave](https://github.com/sanjayram-07/sanjayram-07/contribution-wave.svg)
 
 
 ## 🏆 Competitive Programming  
