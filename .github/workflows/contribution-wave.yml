@@ -2,7 +2,7 @@ name: Generate Contribution Wave
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # Daily at midnight
+    - cron: "0 0 * * *"   # Runs daily at midnight
   workflow_dispatch:
 
 jobs:
