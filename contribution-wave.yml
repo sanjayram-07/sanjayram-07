@@ -1,0 +1,22 @@
+name: Generate Contribution Wave
+
+on:
+  schedule: # Runs every 24 hours
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Generate Contribution Wave
+        uses: lowlighter/metrics@latest
+        with:
+          filename: dist/contribution-wave.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: ""
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
