@@ -1,0 +1,33 @@
+name: Generate Contribution Wave
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate_wave:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Generate contribution wave SVG
+      - name: Generate Contribution Wave
+        uses: Platane/snk@v3
+        with:
+          github_user_name: sanjayram-07
+          svg_out_path: dist/contribution-wave.svg
+          gif_out_path: false
+
+      # Commit and push SVG to output branch
+      - name: Commit and push SVG
+        run: |
+          git config --local user.name "github-actions"
+          git config --local user.email "github-actions@github.com"
+          git checkout -B output
+          git add dist/contribution-wave.svg
+          git commit -m "Update Contribution Wave"
+          git push -f origin output
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
