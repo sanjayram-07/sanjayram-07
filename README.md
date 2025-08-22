@@ -44,8 +44,8 @@ A comprehensive collection of **Data Structures & Algorithms** implementations i
 
 ---
 
-## 📈 Contribution Graph  
-![Sanjay's Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=sanjayram-07&theme=tokyo-night)  
+## 📈 Contribution  
+![GitHub Contribution Wave](https://github-contribution-waves.vercel.app/?username=sanjayram-07)
 
 
 ## 🏆 Competitive Programming  
