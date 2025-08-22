@@ -1,17 +1,18 @@
 name: Generate Contribution Wave
 
 on:
-  schedule:
-    - cron: "0 0 * * *"   # Runs daily at midnight
-  workflow_dispatch:
+  workflow_dispatch: # Run manually
 
 jobs:
-  build:
+  generate_wave:
     runs-on: ubuntu-latest
+
     steps:
+      # Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # Generate contribution wave SVG
       - name: Generate Contribution Wave
         uses: Platane/snk@master
         with:
@@ -19,11 +20,14 @@ jobs:
           svg_out_path: contribution-wave.svg
           gif_out_path: false
 
-      - name: Push Contribution Wave
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          branch: output
-          force: true
-          directory: .
+      # Push SVG to output branch
+      - name: Commit and push SVG
+        run: |
+          git config --local user.name "github-actions"
+          git config --local user.email "github-actions@github.com"
+          git checkout -B output
+          git add contribution-wave.svg
+          git commit -m "Update Contribution Wave"
+          git push -f origin output
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
