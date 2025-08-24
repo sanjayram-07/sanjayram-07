@@ -34,11 +34,6 @@ A comprehensive collection of **Data Structures & Algorithms** implementations i
 
 ---
 
-## 🏆 GitHub Trophies  
-[![trophy](https://github-profile-trophy.vercel.app/?username=sanjayram-07&theme=onedark&column=6&margin-w=10&margin-h=10)](https://github.com/ryo-ma/github-profile-trophy)  
-
----
-
 ## 🔥 Contribution Streak  
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=sanjayram-07&theme=tokyonight&hide_border=false)](https://git.io/streak-stats)  
 
